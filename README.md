@@ -53,5 +53,14 @@ Other models may be swapped in and evaluated by changing the pipeline code.
 * **20 Newsgroups** – a classic text classification dataset. It can be downloaded [here](http://qwone.com/~jason/20Newsgroups/).  
 * **PubMed Abstracts** – Abstracts from PubMed articles published between 1/1/24 and 5/31/25 that contain at least one of "Artificial Intelligence", "Large Language Models", or "AI-assisted diagnosis" in the title or abstract. It can be downloaded at [willyrv/pubmed2024_IA-LLM-diagnostic](https://huggingface.co/datasets/willyrv/pubmed2024_IA-LLM-diagnostic).
 
+## Metrics
+
+The pipeline evaluates the topic models using the following metrics:
+
+- **Topic Coherence**: Measures the semantic coherence of the topics using gensim's CoherenceModel with the 'c_v' coherence measure.
+- **Topic Diversity**: Calculates the average pairwise cosine similarity between topics, converted to a diversity score (1 - similarity).
+- **Number of Topics**: The number of unique topics identified by the model.
+- **Running Time**: The time taken (in seconds) for the full pipeline per encoder.
+
 ## License
 This project is licensed under the MIT License.
