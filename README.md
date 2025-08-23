@@ -12,6 +12,12 @@ pip install -r requirements.txt
 
 ## Usage
 
+First run experiments on the **Dummy dataset** to ensure things run smoothly:
+
+```bash
+python topic_model_pipeline.py --dataset dummy_dataset
+```
+
 Run experiments on the **20 Newsgroups dataset**:
 
 ```bash
@@ -31,6 +37,40 @@ python topic_model_pipeline.py --dataset pubmed --quantize
 ```
 
 After running, results are written to `results.csv` in the project root. Each row records the model, whether quantization was used, and the corresponding coherence and diversity scores, so you can easily compare model performance.
+
+## Install packages using uv 
+
+Alternatively, you can install packages using **uv**. uv is "An extremely fast Python package and project manager, written in Rust". You can download it from [here](https://github.com/astral-sh/uv).
+
+To run the code using uv (instructions for Windows but should be similar on other OS) you can:
+
+1- Install uv following the instructions here: https://github.com/astral-sh/uv
+
+2- Clone this repository and go to the experiments folder
+
+3- Create a virtual environment using uv:
+
+```bash
+uv venv --python 3.11
+```
+
+4- Activate the virtual environment
+
+```bash
+.venv/bin/activate
+```
+
+5- Install the required packages
+
+```bash
+uv pip install -r requirements.txt
+```
+
+6- Run the python script
+
+```bash
+python .\topic_model_pipeline.py
+```
 
 ## Models Used
 
