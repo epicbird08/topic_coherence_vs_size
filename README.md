@@ -15,7 +15,7 @@ pip install -r requirements.txt
 First run experiments on the **Dummy dataset** to ensure things run smoothly:
 
 ```bash
-python topic_model_pipeline.py --dataset dummy_dataset
+python topic_model_pipeline.py --dataset dummy
 ```
 
 Run experiments on the **20 Newsgroups dataset**:
@@ -57,7 +57,7 @@ uv venv --python 3.11
 4- Activate the virtual environment
 
 ```bash
-.venv/bin/activate
+.venv\Scripts\activate
 ```
 
 5- Install the required packages
