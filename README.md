@@ -69,7 +69,13 @@ uv pip install -r requirements.txt
 6- Run the python script
 
 ```bash
-python .\topic_model_pipeline.py
+python .\topic_model_pipeline.py --dataset 20newsgroups
+```
+
+and
+
+```bash
+python .\topic_model_pipeline.py --dataset pubmed
 ```
 
 ## Models Used
